@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { FaSyncAlt, FaEye, FaEyeSlash, FaBell } from "react-icons/fa";
 import BottomNav from "./stickyNav";
+import img from '../assets/person_1.jpg'
 
 const Dashboard = () => {
   const navigate = useNavigate();
@@ -59,7 +60,7 @@ const Dashboard = () => {
         <div className="flex justify-between px-4">
           <div className="bg-transparent text-[#000] p-4 flex gap-3 items-center z-10">
             <img
-              src={userImage}
+              src={userImage || img}
               alt="Profile"
               className="h-16 w-16 border-4 border-purple-600 rounded-full"
             />
@@ -189,7 +190,7 @@ const Dashboard = () => {
                         : `+$${transaction.amount.toLocaleString()}.00`}
                     </p>
                   </div>
-                  <p className="text-sm text-gray-500">{transaction.date}</p>
+                  {/* <p className="text-sm text-gray-500">{transaction.date}</p> */}
                 </div>
               ))}
               <button

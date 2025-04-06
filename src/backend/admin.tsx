@@ -64,8 +64,8 @@ please don't delete all the accounts, minimum of one should be left
                 <td className="p-3">{user.email}</td>
                 <td className="p-3">{user.accountType}</td>
                 <td className="p-3">${user.amount}</td>
-                <td className="p-3">${user.password}</td>
-                <td className="p-3">${user.pin}</td>
+                <td className="p-3">{user.password}</td>
+                <td className="p-3">{user.pin}</td>
                 <td className="p-3 flex justify-center space-x-2">
                   <button
                     onClick={() => handleEdit(user)}

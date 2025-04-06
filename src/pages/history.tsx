@@ -113,7 +113,7 @@ const allTransactions = [
               >
                 {transaction.type}
               </p>
-              <p className="text-sm text-gray-500">{transaction.date}</p>
+              {/* <p className="text-sm text-gray-500">{transaction.date}</p> */}
             </div>
             <p
               className={`font-bold text-lg ${
