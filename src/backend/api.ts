@@ -12,7 +12,7 @@ const headers = {
 // Fetch all users
 export const getUsers = async () => {
   const response = await axios.get(BASE_URL, { headers });
-  return response.data.record.users || []; // Extract only users array
+  return response.data.record.users || []; 
 };
 
 // Add a new user
