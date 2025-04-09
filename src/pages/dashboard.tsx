@@ -31,7 +31,7 @@ const Dashboard = () => {
   }, []);
 
   const allTransactions = [
-    { type: "Credit", amount: userAmount, date: "2025-02-07 09:00:00" },
+    { type: "Deposit", amount: userAmount, date: "2025-02-07 09:00:00" },
     // { type: "Credit", amount: 75000.0, date: "2025-01-02 16:00:00" },
     // { type: "Debit", amount: -1200.0, date: "2025-02-07 14:30:00" },
     // { type: "Credit", amount: 2000.0, date: "2025-01-01 10:00:00" },
@@ -155,10 +155,10 @@ const Dashboard = () => {
 
           <div className="flex justify-evenly">
 
-            <div className="bg-black text-[#ccc] shadow-lg px-4 py-2 rounded-lg mt-2 w-[200px]   text-center  pointer">
+            <div className="bg-black  h-[70px] mr-2 text-[#ccc] shadow-lg px-4 py-2 rounded-lg mt-2 w-[200px]   text-center  pointer">
               <span className="text-[10px]">Account type</span> <br /><span className="uppercase font-semibold">{accountType}</span></div>
 
-            <div className="bg-black text-[#ccc] shadow-lg px-4 py-2 rounded-lg mt-2 w-[200px]   text-center  pointer">
+            <div className="bg-black h-[70px] mr-2  text-[#ccc] shadow-lg px-4 py-2 rounded-lg mt-2 w-[200px]   text-center  pointer">
               <span className="text-[10px]">Account type</span> <br /><span className="uppercase font-semibold">{subType}</span></div>
 
 

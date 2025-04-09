@@ -5,9 +5,9 @@ import { FiSettings } from "react-icons/fi";
 
 const SettingsPage = () => {
   const [isLoading, setIsLoading] = useState(false);
-  const [user, setUser] = useState<{ firstName: string; lastName: string ; profilePicture: string } | null>(null);
+  const [user, setUser] = useState<{ firstName: string; middleName: string; lastName: string ; profilePicture: string } | null>(null);
   const navigate = useNavigate();
-  const fullName = user ? `${user.firstName} ${user.lastName}` : "";
+  const fullName = user ? `${user.firstName} ${user.middleName} ${user.lastName}` : "";
 
   useEffect(() => {
     const storedUser = localStorage.getItem('loggedInUser');
