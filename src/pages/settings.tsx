@@ -5,9 +5,21 @@ import { FiSettings } from "react-icons/fi";
 
 const SettingsPage = () => {
   const [isLoading, setIsLoading] = useState(false);
-  const [user, setUser] = useState<{ firstName: string; middleName: string; lastName: string ; profilePicture: string } | null>(null);
+  const [user, setUser] = useState<{ firstName: string; middleName:string ; lastName: string ; profilePicture: string ; amount : number; } | null>(null);
   const navigate = useNavigate();
   const fullName = user ? `${user.firstName} ${user.middleName} ${user.lastName}` : "";
+  const [activeModal, setActiveModal] = useState<string | null>(null);
+
+  const Modal = ({ title, content, onClose }: { title: string; content: React.ReactNode; onClose: () => void }) => (
+    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+      <div className="bg-white rounded-lg p-6 w-[90%] max-w-md shadow-lg relative">
+        <h2 className="text-xl font-semibold mb-4">{title}</h2>
+        <div className="mb-4">{content}</div>
+        <button onClick={onClose} className="mt-4 text-sm border-2 border-black text-black px-3 py-1 rounded hover:bg-black hover:text-white">X</button>
+      </div>
+    </div>
+  );
+  
 
   useEffect(() => {
     const storedUser = localStorage.getItem('loggedInUser');
@@ -57,31 +69,77 @@ const SettingsPage = () => {
             <div>
               <h2 className="text-sm font-bold text-gray-700 mb-4">Profile Settings</h2>
               <ul className="space-y-4">
-                {[
-                  { name: fullName || 'User', sub: 'Profile Settings', action: 'Edit' },
-                  { name: 'Account Limits', sub: 'View account limits', action: 'View' },
-                  { name: 'Statements & Reports', sub: 'Download monthly statements.' },
-                  { name: 'Referrals', sub: 'Earn money when your friends join.' },
-                  { name: '24/7 Help Center', sub: 'Have an issue? Speak to our team.' },
-                ].map((item, index) => (
-                  <li
-                    key={index}
-                    className="flex items-center justify-between bg-gray-100 p-4 rounded-lg shadow-sm hover:shadow-md transition"
-                  >
-                    <div className="flex items-center space-x-3">
-                 <FiSettings className='text-2xl'/>
-                      <div>
-                        <p className="text-sm font-medium text-gray-800">{item.name}</p>
-                        <p className="text-xs text-gray-500">{item.sub}</p>
-                      </div>
-                    </div>
-                    {item.action && (
-                      <button className="text-purple-500 text-sm font-semibold">{item.action}</button>
-                    )}
-                  </li>
-                ))}
+              {[
+  { key: 'profile', name: fullName || 'User', sub: 'Profile Settings', action: 'Edit' },
+  { key: 'limits', name: 'Account Limits', sub: 'View account limits', action: 'View' },
+  { key: 'statements', name: 'Statements & Reports', sub: 'Download monthly statements.' },
+  { key: 'referrals', name: 'Referrals', sub: 'Earn money when your friends join.' },
+  { key: 'support', name: '24/7 Help Center', sub: 'Have an issue? Speak to our team.' },
+].map((item, index) => (
+  <li
+    key={index}
+    className="flex items-center justify-between bg-gray-100 p-4 rounded-lg shadow-sm hover:shadow-md transition cursor-pointer"
+    onClick={() => setActiveModal(item.key)}
+  >
+    <div className="flex items-center space-x-3">
+      <FiSettings className='text-2xl' />
+      <div>
+        <p className="text-sm font-medium text-gray-800">{item.name}</p>
+        <p className="text-xs text-gray-500">{item.sub}</p>
+      </div>
+    </div>
+    {item.action && (
+      <button className="text-purple-500 text-sm font-semibold">{item.action}</button>
+    )}
+  </li>
+))}
+
               </ul>
             </div>
+
+            {activeModal && (
+  <Modal
+    title={(() => {
+      switch (activeModal) {
+        case 'profile': return 'Edit Profile';
+        case 'limits': return 'Account Limits';
+        case 'statements': return 'Statements & Reports';
+        case 'referrals': return 'Referrals';
+        case 'support': return 'Help Center';
+        default: return '';
+      }
+    })()}
+    content={(() => {
+      switch (activeModal) {
+        case 'profile':
+          return <div><p>Edit your profile info here.</p>
+          <img src={user?.profilePicture} alt="" className='w-[100px] rounded-full h-[100px] border-4 border-purple-500 m-auto mt-5' />
+          First Name:<input type="text" value={user?.firstName}  className='border-2 mt-2 px-2' readOnly/> <br />
+          Last Name:<input type="text" value={user?.lastName}  className='border-2 mt-2 px-2' readOnly/>
+
+          
+          
+          
+          </div>;
+        case 'limits':
+          return <>
+          {/* <p>These are your account limits.</p> */}
+          <p className='text-xl font-bold'> 500,000.00</p>
+          <button className='bg-black text-white px-4 py-2 mt-3 hover:bg-transparent hover:border-2 hover:border-black hover:text-black'>Upgrade Limit</button></>;
+        case 'statements':
+          return <p>Download your monthly statements.</p>;
+        case 'referrals':
+          return <p>Invite your friends and earn rewards.</p>;
+        case 'support':
+          return <p>Contact support anytime.</p>;
+        default:
+          return null;
+      }
+    })()}
+    onClose={() => setActiveModal(null)}
+  />
+)}
+
 
             <div>
               <h2 className="text-sm font-bold text-gray-700 mb-4">Password & Security</h2>
@@ -117,7 +175,7 @@ const SettingsPage = () => {
                 </li>
               </ul>
             </div>
-          </div>
+          </div> 
 
           <footer className="text-center text-gray-500 text-xs py-4 bg-gray-50">
             Version 9.8.0

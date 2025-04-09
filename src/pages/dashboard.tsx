@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { FaSyncAlt, FaEye, FaEyeSlash, FaBell } from "react-icons/fa";
 import BottomNav from "./stickyNav";
 import img from '../assets/person_1.jpg'
+import StatComponent from "../components/stats";
 
 const Dashboard = () => {
   const navigate = useNavigate();
@@ -204,6 +205,7 @@ const Dashboard = () => {
           </div>
         </div>
       </div>
+      <StatComponent/>
       <BottomNav />
     </>
   );
