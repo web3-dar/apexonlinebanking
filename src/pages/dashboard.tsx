@@ -32,7 +32,8 @@ const Dashboard = () => {
   }, []);
 
   const allTransactions = [
-    { type: "Deposit", amount: userAmount, date: "2025-02-07 09:00:00" },
+    { type: "Deposit", amount: 4250.0, date: "2025-02-07 14:30:00" },
+    { type: "Deposit", amount: 6250., date: "2025-02-07 09:00:00" },
     // { type: "Credit", amount: 75000.0, date: "2025-01-02 16:00:00" },
     // { type: "Debit", amount: -1200.0, date: "2025-02-07 14:30:00" },
     // { type: "Credit", amount: 2000.0, date: "2025-01-01 10:00:00" },
@@ -170,7 +171,7 @@ const Dashboard = () => {
 
           
           <div className="bg-[#ccc] mt-7 m-auto  text-[#000] shadow-lg px-4 py-2 rounded-lg mt-2 w-[200px]   text-center  pointer">
-              <span className="text-[10px]">Limits</span> <br /><span className="uppercase font-semibold">$500,000</span></div>
+              <span className="text-[10px]">Limits</span> <br /><span className="uppercase font-semibold">$1,000,000</span></div>
 
        
          
