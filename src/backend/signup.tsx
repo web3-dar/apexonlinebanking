@@ -18,6 +18,8 @@ const schema = yup.object().shape({
   accountType: yup.string().oneOf(["Personal", "Business"]).required(),
   address: yup.string().required("Address is required"),
   amount: yup.number().default(0),
+  accountNumber: yup.number().default(0),
+  limit: yup.number().default(0),
   profilePicture: yup.string().optional(),
   gender: yup.string().oneOf(["Male", "Female"]).required(),
   dob: yup.string().required("Date of Birth is required"),

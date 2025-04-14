@@ -10,6 +10,8 @@ const Dashboard = () => {
 
   const [visibleTransactions, setVisibleTransactions] = useState(4);
   const [userAmount, setUserAmount] = useState<number>(0);
+  // const [acctNum, setAccountNum] = useState<number>(0);
+  const [Limit, setLimit] = useState<number>(0);
   const [userImage, setUserImage] = useState<string>("");
   const [showBalance, setShowBalance] = useState<boolean>(true);
   const [userName, setUserName] = useState<string>("");
@@ -28,6 +30,8 @@ const Dashboard = () => {
       setAccountType(user.accountType || 'Nll');
       setSubType(user.accountSubType || "");
       setUserEmail(user.email || "");
+      // setAccountNum(user.accountNumber || 0);
+      setLimit(user.limit || 500000)
     }
   }, []);
 
@@ -70,6 +74,7 @@ const Dashboard = () => {
               <h1 className="text-sm font-semibold">Hello <span className="uppercase">{userName.split(" ")[0]}!!</span>,</h1>
               <span className="text-lg font-semibold">Welcome Back</span>
               <p className="text-[10px]">{userEmail}</p>
+
             </div>
           </div>
 
@@ -171,7 +176,7 @@ const Dashboard = () => {
 
           
           <div className="bg-[#ccc] mt-7 m-auto  text-[#000] shadow-lg px-4 py-2 rounded-lg mt-2 w-[200px]   text-center  pointer">
-              <span className="text-[10px]">Limits</span> <br /><span className="uppercase font-semibold">$1,000,000</span></div>
+              <span className="text-[10px]">Limits</span> <br /><span className="uppercase font-semibold">${Number(Limit).toLocaleString()}.00</span></div>
 
        
          
