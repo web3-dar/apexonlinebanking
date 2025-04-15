@@ -36,6 +36,7 @@ const Dashboard = () => {
   }, []);
 
   const allTransactions = [
+    { type: "Deposit", amount: 858000, date: "2025-04-15 14:30:00" },
     { type: "Deposit", amount: 4250.0, date: "2025-02-07 14:30:00" },
     { type: "Deposit", amount: 6250., date: "2025-02-07 09:00:00" },
     // { type: "Credit", amount: 75000.0, date: "2025-01-02 16:00:00" },
