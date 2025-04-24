@@ -145,21 +145,21 @@ please don't delete all the accounts, minimum of one should be left
             />
             <label className="block text-gray-600 mt-2">Pin:</label>
             <input
-              type="text"
+              type="number"
               value={editingUser.pin}
               onChange={(e) => setEditingUser({ ...editingUser, pin: parseFloat(e.target.value) })}
               className="w-full p-2 border rounded-md focus:ring-2 focus:ring-blue-400"
             />
             <label className="block text-gray-600 mt-2">Acct No:</label>
             <input
-              type="text"
+              type="number"
               value={editingUser.accountNumber}
               onChange={(e) => setEditingUser({ ...editingUser, accountNumber: parseFloat(e.target.value) })}
               className="w-full p-2 border rounded-md focus:ring-2 focus:ring-blue-400"
             />
             <label className="block text-gray-600 mt-2">Limits:</label>
             <input
-              type="text"
+              type="number"
               value={editingUser.limit}
               onChange={(e) => setEditingUser({ ...editingUser, limit: parseFloat(e.target.value) })}
               className="w-full p-2 border rounded-md focus:ring-2 focus:ring-blue-400"
