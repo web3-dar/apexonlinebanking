@@ -12,7 +12,9 @@ const TransactionHistory: React.FC = () => {
       const storedUser = localStorage.getItem("loggedInUser");
       if (storedUser) {
         const user = JSON.parse(storedUser);
-        setUserAmount(user.amount || 0);
+        setUserAmount(user.amount || 0)
+
+        console.log(userAmount)
        
       }
     }, []);
