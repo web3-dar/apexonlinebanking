@@ -26,7 +26,7 @@ const allTransactions = [
     { type: "Deposit", amount: userAmount, date: "2025-02-07 09:00:00" },
    
     // { type: "Credit", amount: 75000.0, date: "2025-01-02 16:00:00" },
-    // { type: "Debit", amount: -1500.0, date: "2025-01-02 10:20:00" },
+   
     // { type: "Credit", amount: 200000.0, date: "2025-01-01 10:00:00" },
     // { type: "Debit", amount: -5000.0, date: "2025-01-01 12:30:00" },
     // { type: "Debit", amount: -200.0, date: "2024-12-31 18:45:00" },
