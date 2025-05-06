@@ -22,8 +22,8 @@ const TransactionHistory: React.FC = () => {
 
 
 const allTransactions = [
-  // { type: "Debit", amount: -280000, date: "2025-02-07 14:30:00" },
-    { type: "Deposit", amount: userAmount, date: "2025-02-07 09:00:00" },
+  { type: "Debit", amount: -280000, date: "2025-02-07 14:30:00" },
+    // { type: "Deposit", amount: userAmount, date: "2025-02-07 09:00:00" },
    
     // { type: "Credit", amount: 75000.0, date: "2025-01-02 16:00:00" },
    
