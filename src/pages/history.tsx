@@ -14,7 +14,7 @@ const TransactionHistory: React.FC = () => {
         const user = JSON.parse(storedUser);
         setUserAmount(user.amount || 0)
 
-        // console.log(userAmount)
+        console.log(userAmount)
        
       }
     }, []);
