@@ -25,7 +25,7 @@ const Dashboard = () => {
     if (storedUser) {
       const user = JSON.parse(storedUser);
       setUserAmount(user.amount || 0);
-      setUserImage(user.profilePicture || "default-avatar.jpg");
+      setUserImage(user.profilePicture || img);
       setUserName(user.firstName || "User");
       setAccountType(user.accountType || 'Nll');
       setSubType(user.accountSubType || "");
@@ -70,7 +70,7 @@ const Dashboard = () => {
           <div className="bg-transparent text-[#000] p-4 flex gap-3 items-center z-10">
             <img
               src={userImage || img}
-              alt="Profile"
+              // alt="Profile"
               className="h-16 w-16 border-4 border-purple-600 rounded-full"
             />
             <div>

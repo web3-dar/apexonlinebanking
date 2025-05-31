@@ -207,7 +207,7 @@ const LoginForm: React.FC = () => {
               <>
                 <img
                   src={popupImage}
-                  alt="User Profile"
+                  // alt="User Profile"
                   className="w-16 h-16 rounded-full mb-4"
                 />
                 <p className="text-lg font-semibold">{popupMessage}</p>
