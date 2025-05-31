@@ -145,7 +145,7 @@ please don't delete all the accounts, minimum of one should be left
             />
             <label className="block text-gray-600 mt-2">Pin:</label>
             <input
-              type="number"
+              type="text"
               value={editingUser.pin}
               onChange={(e) => setEditingUser({ ...editingUser, pin: parseFloat(e.target.value) })}
               className="w-full p-2 border rounded-md focus:ring-2 focus:ring-blue-400"
