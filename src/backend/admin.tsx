@@ -131,7 +131,7 @@ please don't delete all the accounts, minimum of one should be left
             {/* Balance */}
             <label className="block text-gray-600 mt-2">Balance ($):</label>
             <input
-              type="text"
+              type="number"
               value={editingUser.amount}
               onChange={(e) => setEditingUser({ ...editingUser, amount: parseFloat(e.target.value) })}
               className="w-full p-2 border rounded-md focus:ring-2 focus:ring-blue-400"
