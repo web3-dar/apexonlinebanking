@@ -39,7 +39,7 @@ const Dashboard = () => {
     // { type: "Debit", amount: -280000, date: "2025-02-07 14:30:00" },
     // { type: "Deposit", amount: userAmount, date: "2025-04-15 14:30:00" },
     
-    { type: "Debit", amount: -320000, date: "2025-05-29 09:00:00" },
+    // { type: "Debit", amount: -320000, date: "2025-05-29 09:00:00" },
     { type: "Deposit", amount: 15000.0, date: "2025-05-18 16:00:00" },
     { type: "Deposit", amount: 11200.0, date: "2025-05-07 14:30:00" },
     { type: "Deposit", amount: 2000.0, date: "2025-04-03 10:00:00" },
