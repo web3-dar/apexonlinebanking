@@ -22,53 +22,26 @@ const TransactionHistory: React.FC = () => {
 
 
 const allTransactions = [
-  // { type: "Debit", amount: -280000, date: "2025-02-07 14:30:00" },
-    // { type: "Deposit", amount: userAmount, date: "2025-02-07 09:00:00" },
-    { type: "Deposit", amount: 10000, date: "2025-05-29 09:00:00" },
-    { type: "Deposit", amount: 15000.0, date: "2025-05-18 16:00:00" },
-    { type: "Deposit", amount: 11200.0, date: "2025-05-07 14:30:00" },
-    { type: "Deposit", amount: 2000.0, date: "2025-04-03 10:00:00" },
-    { type: "Deposit", amount: 30400.0, date: "2025-04-01 10:00:00" },
-   
-    // { type: "Credit", amount: 75000.0, date: "2025-01-02 16:00:00" },
-   
-    // { type: "Credit", amount: 200000.0, date: "2025-01-01 10:00:00" },
-    // { type: "Debit", amount: -5000.0, date: "2025-01-01 12:30:00" },
-    // { type: "Debit", amount: -200.0, date: "2024-12-31 18:45:00" },
-    // { type: "Credit", amount: 100000.0, date: "2024-12-31 10:15:00" },
-    // { type: "Credit", amount: 180000.0, date: "2024-12-15 08:30:00" },
-    // { type: "Debit", amount: -3000.0, date: "2024-12-15 14:50:00" },
-    // { type: "Debit", amount: -800.0, date: "2024-12-10 11:00:00" },
-    // { type: "Credit", amount: 95000.0, date: "2024-12-10 09:45:00" },
-    // { type: "Debit", amount: -600.0, date: "2024-12-05 17:20:00" },
-    // { type: "Credit", amount: 300000.0, date: "2024-12-05 10:10:00" },
-    // { type: "Debit", amount: -12000.0, date: "2024-11-30 15:40:00" },
-    // { type: "Credit", amount: 400000.0, date: "2024-11-30 08:00:00" },
-    // { type: "Debit", amount: -500.0, date: "2024-11-25 13:25:00" },
-    // { type: "Credit", amount: 175000.0, date: "2024-11-25 07:45:00" },
-    // { type: "Credit", amount: 250000.0, date: "2024-11-20 09:15:00" },
-    // { type: "Debit", amount: -3200.0, date: "2024-11-20 19:50:00" },
-    // { type: "Debit", amount: -900.0, date: "2024-11-15 18:30:00" },
-    // { type: "Credit", amount: 60000.0, date: "2024-11-15 07:00:00" },
-    // { type: "Debit", amount: -1000.0, date: "2024-11-10 20:10:00" },
-    // { type: "Credit", amount: 80000.0, date: "2024-11-10 08:30:00" },
-    // { type: "Debit", amount: -2500.0, date: "2024-11-05 13:45:00" },
-    // { type: "Credit", amount: 120000.0, date: "2024-11-05 07:15:00" },
-    // { type: "Debit", amount: -300.0, date: "2024-10-31 22:30:00" },
-    // { type: "Credit", amount: 90000.0, date: "2024-10-31 10:00:00" },
-    // { type: "Debit", amount: -4500.0, date: "2024-10-25 15:00:00" },
-    // { type: "Credit", amount: 250000.0, date: "2024-10-25 08:15:00" },
-    // { type: "Credit", amount: 100000.0, date: "2024-10-20 09:30:00" },
-    // { type: "Debit", amount: -5500.0, date: "2024-10-20 12:50:00" },
-    // { type: "Debit", amount: -600.0, date: "2024-10-15 14:00:00" },
-    // { type: "Credit", amount: 70000.0, date: "2024-10-15 08:45:00" },
-    // { type: "Debit", amount: -3500.0, date: "2024-10-10 13:20:00" },
-    // { type: "Credit", amount: 220000.0, date: "2024-10-10 08:00:00" },
-    // { type: "Debit", amount: -2500.0, date: "2024-10-05 19:30:00" },
-    // { type: "Credit", amount: 140000.0, date: "2024-10-05 07:10:00" },
-    // { type: "Credit", amount: 50000.0, date: "2024-10-01 09:40:00" },
-    // { type: "Debit", amount: -700.0, date: "2024-10-01 20:30:00" },
-  ];
+  { type: "Debit", amount: -320000, date: "2025-05-29 09:00:00" },
+  { type: "Deposit", amount: 15000.0, date: "2025-05-18 16:00:00" },
+  { type: "Deposit", amount: 11200.0, date: "2025-05-07 14:30:00" },
+  { type: "Deposit", amount: 2000.0, date: "2025-04-03 10:00:00" },
+  { type: "Deposit", amount: 30400.0, date: "2025-04-01 10:00:00" },
+
+  { type: "Debit", amount: -3000.0, date: "2024-12-20 10:15:00" },
+  { type: "Deposit", amount: 6400.0, date: "2024-11-11 09:00:00" },
+  { type: "Deposit", amount: 8500.0, date: "2024-10-15 16:30:00" },
+  { type: "Debit", amount: -7000.0, date: "2024-09-05 08:45:00" },
+  { type: "Deposit", amount: 12000.0, date: "2024-08-23 12:00:00" },
+  { type: "Debit", amount: -500.0, date: "2024-07-08 17:00:00" },
+  { type: "Deposit", amount: 3000.0, date: "2024-06-10 14:20:00" },
+  { type: "Deposit", amount: 2500.0, date: "2024-05-14 15:00:00" },
+  { type: "Debit", amount: -1500.0, date: "2024-04-22 10:30:00" },
+  { type: "Deposit", amount: 10000.0, date: "2024-03-18 11:00:00" },
+  { type: "Debit", amount: -2000.0, date: "2024-02-05 13:40:00" },
+  { type: "Deposit", amount: 5000.0, date: "2024-01-12 09:15:00" }
+];
+
   const inflow = allTransactions
     .filter((t) => t.type === "Credit")
     .reduce((sum, t) => sum + t.amount, 0);
